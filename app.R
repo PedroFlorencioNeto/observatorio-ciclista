@@ -9,7 +9,12 @@ ui <- navbarPage("Instituto de Pesquisa e Planejamento de Fortaleza", id='nav',
                             includeScript("gomap.js")
                                     ),
                           leafletOutput("map", width="100%", height="100%")
-                          )
+                          ),
+                      absolutePanel(id="controls", class="panel panel-default",
+                                    fixed=TRUE, draggable=TRUE, top=60, left="auto",
+                                    right=20, bottom="auto", width=330, height="auto",
+                                    h3("Indicadores")
+                                    )
                       )
                   )
 
